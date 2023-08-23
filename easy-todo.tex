@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage{listings}
+\usepackage[enabled,section]{easy-todo}
+
+\begin{document}
+	\title{The \texttt{easy-todo} package}
+	\author{Juan Rada-Vilela}
+	\date{January, 2011}
+	
+	\maketitle
+	
+	\begin{abstract}
+		The \texttt{easy-todo} package allows to add TODO notes all along the document and show the list of TODOs as an index with references. 
+	\end{abstract}
+	
+	\section{Options}
+	When including the package, the following options are available:
+	
+	\begin{description}
+		\item [enabled] Shows the TODO notes as well as the index.
+		\item [disabled] Hides the TODO notes as well as the index. Useful for printing drafts without the TODO notes but keeping them in the document.
+		\item [final] Same as disabled.
+		\item [chapter] Prints the list of TODOs as a chapter.
+		\item [section] Prints the list of TODOs as a section.
+	\end{description}
+	
+	For example:
+\lstset{language=TeX}
+\begin{lstlisting}
+\usepackage[enabled,section]{easy-todo}
+\end{lstlisting}
+
+	\section{Commands}
+	\begin{description}
+		\item [\textbackslash todo\{note\}] Adds in the same location a TODO note with text \texttt{note}.
+		\item [\textbackslash listoftodos] Creates the list of TODOs in the same location as used.
+	\end{description}
+	
+	\todo{This is a TODO note}
+	
+	\todo{I wish there was more to mention about this package, but it is so simple that it is straight-forward to understand the beginner's code}
+	
+	\listoftodos
+\end{document}
